@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Samridhi 💖</title>
+  <meta name="description" content="A special website for Samridhi with love messages and contact information">
+  <meta name="keywords" content="Samridhi, love, special, message, contact">
+  <meta name="author" content="Arth">
+  <meta property="og:title" content="For Samridhi 💖">
+  <meta property="og:description" content="A special website for Samridhi with love messages and contact information">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://forsamridhi.com">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://forsamridhi.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #ffe0ec);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    header {
+      padding: 60px 20px 20px;
+      font-size: 2.5em;
+      color: #d63384;
+      animation: fadeIn 2s ease;
+    }
+    .section {
+      padding: 40px 20px;
+      animation: fadeIn 2s ease;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .heart {
+      animation: pulse 1.5s infinite;
+      color: red;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .button {
+      margin-top: 20px;
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .button:hover {
+      background-color: #e0559c;
+      transform: translateY(-2px);
+    }
+    .button:active {
+      transform: translateY(0);
+    }
+    .message-box {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    input[type="text"] {
+      padding: 12px 20px;
+      width: 60%;
+      border-radius: 10px;
+      border: 2px solid #ff69b4;
+      margin-top: 10px;
+      font-size: 1em;
+      transition: 0.3s ease;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #e0559c;
+      box-shadow: 0 0 10px rgba(255,105,180,0.3);
+    }
+    #audio-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+    .phone-number {
+      font-size: 1.2em;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 10px;
+      background: white;
+      border-radius: 10px;
+      display: inline-block;
+      min-width: 200px;
+    }
+    .loading {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #ff69b4;
+      border-top: 5px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .error-message {
+      color: #ff0000;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="audio-btn" onclick="toggleAudio()">🔇 Music</button>
+
+  <header>
+    Hi Samridhi, this is for you <span class="heart">❤️</span>
+  </header>
+
+  <div class="section">
+    <h2>What Makes You Special ✨</h2>
+    <p>You have the sweetest smile I've ever seen...</p>
+    <p>Your presence brings peace and joy in every moment...</p>
+    <p>You're kind, smart, and simply amazing.</p>
+  </div>
+
+  <div class="section">
+    <h2>If I Could Say One Thing...</h2>
+    <div class="message-box">
+      <p>
+        Dear Samridhi,<br><br>
+        I made this little website just to make you smile. I don't know how you'll react, but I just wanted you to know you're truly special.<br><br>
+        If someday you feel like sharing something, or even just talking...<br><br>
+        — Arth
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Would You Like To Share Your Number?</h2>
+    <p>I'd love to hear your thoughts sometime... 💬</p>
+    <form id="contact-form" onsubmit="handleSubmit(event)">
+      <input type="tel" id="phone-number" placeholder="Your Number" required pattern="[0-9]{10}">
+      <div class="error-message" id="phone-error">Please enter a valid 10-digit phone number</div>
+      <br>
+      <button type="submit" class="button">Send ✉️</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Or Just Call Me Directly</h2>
+    <p>If you'd rather talk, just tap below:</p>
+    <div class="phone-number" id="number-display">Click to reveal number</div>
+    <button class="button" onclick="showNumber()">Show Number 📞</button>
+  </div>
+
+  <script>
+    // Initialize audio
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById("bg-music");
+      audio.volume = 0.5; // Set volume to 50%
+    });
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const phoneNumber = document.getElementById('phone-number').value;
+      const errorMessage = document.getElementById('phone-error');
+      
+      // Validate phone number
+      if (!/^[0-9]{10}$/.test(phoneNumber)) {
+        errorMessage.style.display = 'block';
+        return;
+      }
+      
+      errorMessage.style.display = 'none';
+      showLoading(true);
+      
+      // Simulate form submission
+      setTimeout(() => {
+        showLoading(false);
+        alert("Thank you Samridhi! 🤍 I'll be waiting.");
+        document.getElementById('contact-form').reset();
+      }, 1500);
+    }
+
+    function showNumber() {
+      const numberElement = document.getElementById('number-display');
+      numberElement.textContent = '9973111925';
+      numberElement.style.cursor = 'pointer';
+      numberElement.onclick = function() {
+        window.location.href = 'tel:9973111925';
+      };
+    }
+
+    function toggleAudio() {
+      const audio = document.getElementById("bg-music");
+      const btn = document.getElementById("audio-btn");
+      
+      if (audio.paused) {
+        audio.play().catch(error => {
+          console.log("Audio play failed:", error);
+          alert("Please click the music button to start the audio");
+        });
+        btn.textContent = "🔊 Music";
+      } else {
+        audio.pause();
+        btn.textContent = "🔇 Music";
+      }
+    }
+
+    function showLoading(show) {
+      const loading = document.querySelector('.loading');
+      loading.style.display = show ? 'flex' : 'none';
+    }
+  </script>
+</body>
+</html> 
